@@ -8,8 +8,13 @@
    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
    	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-   	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
    	<script src="{{asset('js/app.js')}}" defer></script>
+
+   	<style>
+   		html {
+			scroll-behavior: smooth;
+		}
+   	</style>
 
 </head>
 <body>
@@ -147,8 +152,8 @@
 		<!-- project -->
 		<div id="project-slide" class="flex mx-28 h-3/4">
 			<div class="flex justify-center mr-3 mt-6 md:mt-0 md:space-y-3 md:flex-col">
-	            <a href="#project1" class="w-3 h-3 mx-2 bg-blue-500 rounded-full md:mx-0 focus:outline-none"></a>
-	            <a href="#project2" class="w-3 h-3 mx-2 bg-gray-300 rounded-full md:mx-0 focus:outline-none hover:bg-blue-500"></a>
+	            <a href="#project1" class="w-3 h-3 mx-2 rounded-full md:mx-0 focus:outline-none bg-gray-300 hover:bg-blue-500"></a>
+	            <a href="#project2" class="w-3 h-3 mx-2 rounded-full md:mx-0 focus:outline-none bg-gray-300 hover:bg-blue-500"></a>
 	        </div>
 			
 			<div class="block px-5 pb-4 overflow-hidden">
@@ -194,11 +199,11 @@
 					<!-- review project -->
 					<div class="w-full text-gray-700 self-center">
 						<p class="text-3xl font-bold text-blue-700 flex">Sistem Informasi Pegawai
-							<a style="cursor: pointer;" href="https://kedar-id.herokuapp.com" class="ml-2 hover:text-blue-500 h-full transform hover:scale-110">
+							<!-- <a style="cursor: pointer;" href="https://kedar-id.herokuapp.com" class="ml-2 hover:text-blue-500 h-full transform hover:scale-110">
 								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
 								</svg>
-							</a>
+							</a> -->
 						</p>
 						<p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
