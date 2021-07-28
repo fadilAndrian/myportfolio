@@ -8,6 +8,7 @@
    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
    	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
    	<script src="{{asset('js/app.js')}}" defer></script>
 
    	<style>
@@ -117,7 +118,7 @@
 			        >
 
 					<!-- content about -->
-					<div class="flex mt-20 mx-32 space-x-14 bg-transparent border-2 border-blue-50 rounded-xl shadow-lg overflow-hidden">
+					<div class="flex mt-20 mx-32 space-x-14 bg-transparent border-2 border-gradient-to-b from-blue-200 rounded-xl shadow-lg overflow-hidden">
 						<!-- title contact -->
 						<div class="w-1/2 m-7 h-full self-center">
 							<div class="text-2xl font-semibold text-gray-700 font-mono">Contact me on :</div>
@@ -152,17 +153,21 @@
 		<!-- project -->
 		<div id="project-slide" class="flex mx-28 h-3/4">
 			<div class="flex justify-center mr-3 mt-6 md:mt-0 md:space-y-3 md:flex-col">
-	            <a href="#project1" class="w-3 h-3 mx-2 rounded-full md:mx-0 focus:outline-none bg-gray-300 hover:bg-blue-500"></a>
-	            <a href="#project2" class="w-3 h-3 mx-2 rounded-full md:mx-0 focus:outline-none bg-gray-300 hover:bg-blue-500"></a>
+				<a for="radio1" name="btn" href="#project1" class="w-3 h-3 mx-2 rounded-full md:mx-0 bg-gray-300 hover:bg-blue-500"></a>
+				
+				<a for="radio2" name="btn" href="#project2" class="w-3 h-3 mx-2 rounded-full md:mx-0 bg-gray-300 hover:bg-blue-500 active:bg-blue-500"></a>
+				
 	        </div>
 			
 			<div class="block px-5 pb-4 overflow-hidden">
 				<!-- content projects -->
 				<div id="project1" class="flex mx-auto space-x-16 pb-24 pt-32">
+
 					<!-- gambar project -->
-					<div class="w-11/12 self-center">
+					<div class="w-11/12 self-center flex">
 						<img class="rounded-xl shadow-xl" src="img/projek/Kedar1.png">
 					</div>
+
 					<!-- /gambar project -->
 
 					<!-- review project -->
@@ -224,6 +229,10 @@
 		</div>
 		<!-- end project -->
 	</div>
+
+	<script>
+		<!--  -->
+	</script>
 
 </body>
 <footer>
