@@ -56,10 +56,10 @@
 			        >
 
 					<!-- content about -->
-					<figure class="flex mt-36 mx-32 space-x-14 bg-blue-100 rounded-xl shadow-2xl overflow-hidden">
+					<figure class="flex mt-28 mx-32 space-x-14 bg-blue-100 rounded-t-xl overflow-hidden">
 						<!-- gambar project -->
 						<div class="w-1/2 h-full">
-							<img class="" src="img/profile.jpg">
+							<img src="img/profile.jpg">
 						</div>
 						<!-- /gambar project -->
 
@@ -81,6 +81,13 @@
 			            </button>
 						<!-- end close button -->
 					</figure>
+
+					<!-- download resume button -->
+					<div style="cursor: pointer;" class="mx-32 text-center rounded-b-xl p-4 bg-blue-500 hover:bg-blue-400">
+						<a class="text-blue-50" href="document/CV2.pdf">Download Resume</a>
+					</div>
+					<!-- end download resume button -->
+					
 					<!-- /content about -->
 
 			        </div>
@@ -165,7 +172,63 @@
 
 					<!-- gambar project -->
 					<div class="w-11/12 self-center flex">
-						<img class="rounded-xl shadow-xl" src="img/projek/Kedar1.png">
+						<div x-data="{gallery1: false}" @click.away="gallery1= false">
+						<img @click="gallery1= !gallery1" style="cursor: pointer;" class="rounded-xl shadow-xl" src="img/projek/Kedar1.png">
+
+						<!-- content gallery -->
+						<div
+					      class="fixed inset-0 w-full h-full z-20 bg-black bg-opacity-70 duration-300 overflow-y-auto"
+					      x-show="gallery1"
+					      x-transition:enter="transition duration-300"
+					      x-transition:enter-start="opacity-0"
+					      x-transition:enter-end="opacity-100"
+					      x-transition:leave="transition duration-300"
+					      x-transition:leave-start="opacity-100"
+					      x-transition:leave-end="opacity-0"
+					    >
+					      <div class="relative w-full mx-2 mx-auto opacity-100">
+					        <div
+					          class="relative bg-transparent text-gray-900 z-20"
+					          @click.away="gallery1 = false"
+					          x-show="gallery1"
+					          x-transition:enter="transition transform duration-300"
+					          x-transition:enter-start="scale-0"
+					          x-transition:enter-end="scale-100"
+					          x-transition:leave="transition transform duration-300"
+					          x-transition:leave-start="scale-100"
+					          x-transition:leave-end="scale-0"
+					        >
+
+							<!-- gallery picts -->
+
+							<div class="my-12 mx-32 relative">
+
+							<!-- close button -->
+							<button class="absolute top-0 right-0 focus:outline-none bg-black bg-opacity-70 hover:bg-red-400 text-white rounded-bl-xl rounded-tr-xl self-start p-2" @click="gallery1 = false">
+				              <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+				                <path
+				                  d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+				                ></path>
+				              </svg>
+				            </button>
+							<!-- end close button -->
+
+							<div class="flex space-x-14 bg-transparent rounded-xl overflow-auto">
+								<img class="rounded-xl" src="img/projek/Kedar1.png">
+								<img class="rounded-xl" src="img/projek/Kedar2.png">
+								<img class="rounded-xl" src="img/projek/Kedar3.png">
+								<img class="rounded-xl" src="img/projek/Kedar4.png">
+							</div>
+							
+							</div>
+							<!-- /gallery picts -->
+
+					        </div>
+					      </div>
+					    </div>
+					    <!-- end content gallery -->
+						</div>
+
 					</div>
 
 					<!-- /gambar project -->
@@ -179,14 +242,12 @@
 								</svg>
 							</a>
 						</p>
-						<p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation.</p>
+						<p class="mt-5 text-justify">Kedar! ditujukan untuk para pelajar dan pengajar yang mengalami kendala dalam proses ajar-mengajar oleh dampak pandemi Covid-19. <span class="text-purple-700">Memiliki fitur untuk berbagi materi dan tugas serta melakukan pertemuang secara daring.</span> <span class="text-green-500">Tantangannya adalah dalam merancang fitur-fitur sistem ini. Itu adalah hal baru yang perlu dipelajari, dan itu membutuhkan waktu.</span></p>
 						<p class="mt-5 text-gray-700 font-bold flex">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 							</svg>
-							April - May 2021
+							April - June 2021
 						</p>
 					</div>
 					<!-- /review project -->
@@ -197,7 +258,60 @@
 				<div id="project2" class="flex mx-auto space-x-16 pb-32 pt-32">
 					<!-- gambar project -->
 					<div class="w-11/12 self-center">
-						<img class="rounded-xl shadow-xl" src="img/projek/sipu2.png">
+
+						<div x-data="{gallery2:false}" @click.away="gallery2=false">
+						<img @click="gallery2=!gallery2" style="cursor: pointer;" class="rounded-xl shadow-xl" src="img/projek/sipu2.png">
+						<!-- content gallery -->
+						<div
+					      class="fixed inset-0 w-full h-full z-20 bg-black bg-opacity-70 duration-300 overflow-y-auto"
+					      x-show="gallery2"
+					      x-transition:enter="transition duration-300"
+					      x-transition:enter-start="opacity-0"
+					      x-transition:enter-end="opacity-100"
+					      x-transition:leave="transition duration-300"
+					      x-transition:leave-start="opacity-100"
+					      x-transition:leave-end="opacity-0"
+					    >
+					      <div class="relative w-full mx-2 mx-auto opacity-100">
+					        <div
+					          class="relative bg-transparent text-gray-900 z-20"
+					          @click.away="gallery2 = false"
+					          x-show="gallery2"
+					          x-transition:enter="transition transform duration-300"
+					          x-transition:enter-start="scale-0"
+					          x-transition:enter-end="scale-100"
+					          x-transition:leave="transition transform duration-300"
+					          x-transition:leave-start="scale-100"
+					          x-transition:leave-end="scale-0"
+					        >
+
+							<!-- gallery picts -->
+
+							<div class="my-12 mx-32 relative">
+
+							<!-- close button -->
+							<button class="absolute top-0 right-0 focus:outline-none bg-black bg-opacity-70 hover:bg-red-400 text-white rounded-bl-xl rounded-tr-xl self-start p-2" @click="gallery2 = false">
+				              <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+				                <path
+				                  d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+				                ></path>
+				              </svg>
+				            </button>
+							<!-- end close button -->
+
+							<div class="flex space-x-14 bg-transparent rounded-xl overflow-auto">
+								<img class="rounded-xl" src="img/projek/sipu2.png">
+							</div>
+							
+							</div>
+							<!-- /gallery picts -->
+
+					        </div>
+					      </div>
+					    </div>
+					    <!-- end content gallery -->
+					    </div>
+
 					</div>
 					<!-- /gambar project -->
 
@@ -210,9 +324,7 @@
 								</svg>
 							</a> -->
 						</p>
-						<p class="mt-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation.</p>
+						<p class="mt-5 text-justify">Sistem ini diharapkan dapat mengolah dan menyimpan data-data untuk sebuah instansi. <span class="text-purple-700">Sistem dilengkapi dengan pengolahan data pegawai, proses cuti, dan proses lembur.</span> <span class="text-green-500">Dalam sistem ini tantangannya ialah dalam menganalisa kebutuhan dari sebuah sistem pegawai itu sendiri.</span></p>
 						<p class="mt-5 text-gray-700 font-bold flex">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
