@@ -28,12 +28,15 @@
 				</div>
 				
 				<!-- bagian mobile -->
+
 				<div x-data="{menu:false}" @click.away="menu= false" class="flex">
+					<!-- humberger -->
 					<div @click="menu=!menu" class="lg:hidden mr-5 hover:text-gray-100 flex">
-						<svg xmlns="http://www.w3.org/2000/svg" :class="{'opacity-0':menu, 'transform opacity-100 duration-1000 delay-200':!menu}" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<svg xmlns="http://www.w3.org/2000/svg" :class="{'opacity-0':menu, 'transform opacity-100 duration-100 delay-300':!menu}" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 						</svg>
 					</div>
+					<!-- end humberger -->
 
 					<!-- mobile nav -->
 					<div x-show="menu"
