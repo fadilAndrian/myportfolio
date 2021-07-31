@@ -19,7 +19,7 @@
 
 </head>
 <body>
-	<div class="lg:h-screen h-full w-full bg-blue-50 lg:mb-0 mb-20">
+	<div class="h-screen w-full bg-blue-50 lg:mb-0 pb-20">
 		<!-- navbar -->
 		<div class="lg:flex block w-full pt-4 lg:pb-10 pb-2 bg-gradient-to-b from-blue-200">
 			<div class="lg:border-0 border-b border-gray-700 border-opacity-10 flex justify-between items-center relative">
