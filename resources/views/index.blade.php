@@ -19,7 +19,7 @@
 
 </head>
 <body>
-	<div class="h-screen w-full bg-blue-50 lg:mb-0 pb-20">
+	<div class="h-screen w-full bg-blue-50 lg:mb-0 pb-40">
 		<!-- navbar -->
 		<div class="lg:flex block w-full pt-4 lg:pb-10 pb-2 bg-gradient-to-b from-blue-200">
 			<div class="lg:border-0 border-b border-gray-700 border-opacity-10 flex justify-between items-center relative">
@@ -418,7 +418,7 @@
 				<!-- /content projects Kedar -->
 
 				<!-- content projects SIP -->
-				<div id="project2" class="lg:flex block lg:mx-auto mx-0 lg:space-x-16 space-x-0 lg:pb-32 lg:pt-32 pb-0 mb-20">
+				<div id="project2" class="lg:flex block lg:mx-auto mx-0 lg:space-x-16 space-x-0 lg:pb-32 lg:pt-32 pb-0">
 					<!-- gambar project SIP -->
 					<div class="lg:w-11/12 w-full lg:mb-0 mb-5 self-center">
 
