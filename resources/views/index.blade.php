@@ -19,7 +19,7 @@
 
 </head>
 <body>
-	<div class="h-screen w-full bg-blue-50 lg:mb-0 pb-40">
+	<div class="lg:h-screen h-full w-full bg-blue-50 lg:mb-0 pb-20 relative">
 		<!-- navbar -->
 		<div class="lg:flex block w-full pt-4 lg:pb-10 pb-2 bg-gradient-to-b from-blue-200">
 			<div class="lg:border-0 border-b border-gray-700 border-opacity-10 flex justify-between items-center relative">
@@ -514,6 +514,10 @@
 
 		</div>
 		<!-- end project -->
+
+		<div class="absolute bottom-0 bg-gradient-to-t from-blue-200 py-10 w-full">
+			<div class="text-transparent">l</div>
+		</div>
 	</div>
 
 	<script>
@@ -521,7 +525,4 @@
 	</script>
 
 </body>
-<footer>
-	<div class="fixed bottom-0 bg-gradient-to-t from-blue-200 py-10 w-full"><p class="text-transparent">l</p></div>
-</footer>
 </html>
