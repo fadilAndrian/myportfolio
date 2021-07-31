@@ -19,7 +19,7 @@
 
 </head>
 <body>
-	<div class="h-screen w-full bg-blue-50">
+	<div class="h-screen w-full bg-blue-50 lg:mb-0 mb-20">
 		<!-- navbar -->
 		<div class="lg:flex block w-full pt-4 lg:pb-10 pb-2 bg-gradient-to-b from-blue-200">
 			<div class="lg:border-0 border-b border-gray-700 border-opacity-10 flex justify-between items-center relative">
@@ -318,9 +318,9 @@
 				
 	        </div>
 			
-			<div class="block px-5 pb-4 overflow-hidden lg:h-full h-full">
+			<div class="block px-5 pb-4 lg:h-full h-full lg:overflow-hidden">
 				<!-- content projects Kedar -->
-				<div id="project1" class="lg:flex block lg:mx-auto mx-0 lg:space-x-16 space-x-0 lg:pb-24 lg:pt-32 pb-32 pt-5">
+				<div id="project1" class="lg:flex block lg:mx-auto mx-0 lg:space-x-16 space-x-0 lg:pb-24 lg:pt-32 mb-20 pt-5">
 
 					<!-- gambar project Kedar -->
 					<div class="lg:w-11/12 w-full self-center flex mx-auto lg:mb-0 mb-5">
@@ -387,27 +387,38 @@
 
 					<!-- review project Kedar -->
 					<div class="w-full text-gray-700 self-center">
-						<p class="lg:text-3xl text-center text-2xl font-bold text-blue-700 flex">Kedar! Web Belajar Online
-							<a style="cursor: pointer;" href="https://kedar-id.herokuapp.com" class="ml-2 hover:text-blue-500 h-full transform hover:scale-110">
-								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+					<div  x-data="{open: false}" @click.away="open= false">
+						<div class="flex justify-between items-center">
+							<a href="https://kedar-id.herokuapp.com" style="cursor: pointer;" class="lg:text-3xl text-center md:text-2xl text-xl font-bold text-blue-700 hover:text-blue-500">Kedar! Web Belajar Online</a>
+							<button @click="open= !open" class="lg:hidden h-full text-blue-700 hover:bg-blue-100 rounded-full">
+								<svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180':open, 'rotate-0':!open}" class="h-6 w-6 transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 								</svg>
-							</a>
-						</p>
-						<p class="mt-5 text-justify">Kedar! ditujukan untuk para pelajar dan pengajar yang mengalami kendala dalam proses ajar-mengajar oleh dampak pandemi Covid-19. <span class="text-purple-700">Memiliki fitur untuk berbagi materi dan tugas serta melakukan pertemuang secara daring.</span> <span class="text-green-500">Tantangannya adalah dalam merancang fitur-fitur sistem ini. Itu adalah hal baru yang perlu dipelajari, dan itu membutuhkan waktu.</span></p>
+							</button>
+						</div>
+						<p x-show="open"
+				           x-transition:enter="transition transform duration-300"
+				           x-transition:enter-start="opacity-0 -translate-y-5"
+				           x-transition:enter-end="opacity-100 translate-y-0"
+				           x-transition:leave="transition transform duration-300"
+				           x-transition:leave-start="opacity-100 translate-y-0"
+				           x-transition:leave-end="opacity-0 -translate-y-5"
+						class="mt-5 text-justify">Kedar! ditujukan untuk para pelajar dan pengajar yang mengalami kendala dalam proses ajar-mengajar oleh dampak pandemi Covid-19. <span class="text-purple-700">Memiliki fitur untuk berbagi materi dan tugas serta melakukan pertemuang secara daring.</span> Tantangannya adalah dalam merancang fitur-fitur sistem ini. Itu adalah hal baru yang perlu dipelajari, dan itu membutuhkan waktu.</p>
+						<p class="lg:block hidden mt-5 text-justify">Kedar! ditujukan untuk para pelajar dan pengajar yang mengalami kendala dalam proses ajar-mengajar oleh dampak pandemi Covid-19. <span class="text-purple-700">Memiliki fitur untuk berbagi materi dan tugas serta melakukan pertemuang secara daring.</span> Tantangannya adalah dalam merancang fitur-fitur sistem ini. Itu adalah hal baru yang perlu dipelajari, dan itu membutuhkan waktu.</p>
 						<p class="mt-5 text-gray-700 font-bold flex">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 							</svg>
 							April - June 2021
 						</p>
+					</div>	
 					</div>
 					<!-- /review project -->
 				</div>
 				<!-- /content projects Kedar -->
 
 				<!-- content projects SIP -->
-				<div id="project2" class="lg:flex block lg:mx-auto mx-0 lg:space-x-16 space-x-0 lg:pb-32 lg:pt-32 pb-32">
+				<div id="project2" class="lg:flex block lg:mx-auto mx-0 lg:space-x-16 space-x-0 lg:pb-32 lg:pt-32 pb-0 mb-20">
 					<!-- gambar project SIP -->
 					<div class="lg:w-11/12 w-full lg:mb-0 mb-5 self-center">
 
@@ -469,20 +480,31 @@
 
 					<!-- review project SIP -->
 					<div class="w-full text-gray-700 self-center">
-						<p class="lg:text-3xl text-2xl font-bold text-blue-700 flex">Sistem Informasi Pegawai
-							<!-- <a style="cursor: pointer;" href="https://kedar-id.herokuapp.com" class="ml-2 hover:text-blue-500 h-full transform hover:scale-110">
-								<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+					<div x-data="{open: false}" @click.away="open= false">
+						<div class="flex justify-between items-center">
+							<p class="lg:text-3xl md:text-2xl text-xl font-bold text-blue-700 flex">Sistem Informasi Pegawai</p>
+							<button @click="open= !open" class="lg:hidden h-full text-blue-700 hover:bg-blue-100 rounded-full">
+								<svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180':open, 'rotate-0':!open}" class="h-6 w-6 transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 								</svg>
-							</a> -->
-						</p>
-						<p class="mt-5 text-justify">Sistem ini diharapkan dapat mengolah dan menyimpan data-data untuk sebuah instansi. <span class="text-purple-700">Sistem dilengkapi dengan pengolahan data pegawai, proses cuti, dan proses lembur.</span> <span class="text-green-500">Dalam sistem ini tantangannya ialah dalam menganalisa kebutuhan dari sebuah sistem pegawai itu sendiri.</span></p>
+							</button>
+						</div>
+						<p x-show="open"
+				           x-transition:enter="transition transform duration-300"
+				           x-transition:enter-start="opacity-0 -translate-y-5"
+				           x-transition:enter-end="opacity-100 translate-y-0"
+				           x-transition:leave="transition transform duration-300"
+				           x-transition:leave-start="opacity-100 translate-y-0"
+				           x-transition:leave-end="opacity-0 -translate-y-5"
+						class="mt-5 text-justify">Sistem ini diharapkan dapat mengolah dan menyimpan data-data untuk sebuah instansi. <span class="text-purple-700">Sistem dilengkapi dengan pengolahan data pegawai, proses cuti, dan proses lembur.</span> Dalam sistem ini tantangannya ialah dalam menganalisa kebutuhan dari sebuah sistem pegawai itu sendiri.</span></p>
+						<p class="lg:block hidden mt-5 text-justify">Sistem ini diharapkan dapat mengolah dan menyimpan data-data untuk sebuah instansi. <span class="text-purple-700">Sistem dilengkapi dengan pengolahan data pegawai, proses cuti, dan proses lembur.</span> Dalam sistem ini tantangannya ialah dalam menganalisa kebutuhan dari sebuah sistem pegawai itu sendiri.</span></p>
 						<p class="mt-5 text-gray-700 font-bold flex">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 							  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 							</svg>
 							June 2021 - On Going
 						</p>
+					</div>
 					</div>
 					<!-- /review project -->
 				</div>
