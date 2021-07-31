@@ -515,9 +515,9 @@
 		</div>
 		<!-- end project -->
 
-		<div class="absolute bottom-0 bg-gradient-to-t from-blue-200 py-10 w-full">
+		<!-- <div class="absolute bottom-0 bg-gradient-to-t from-blue-200 py-10 w-full">
 			<div class="text-transparent">l</div>
-		</div>
+		</div> -->
 	</div>
 
 	<script>
