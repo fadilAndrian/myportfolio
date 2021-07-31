@@ -390,7 +390,7 @@
 					<div  x-data="{open: false}" @click.away="open= false">
 						<div class="flex justify-between items-center">
 							<a href="https://kedar-id.herokuapp.com" style="cursor: pointer;" class="lg:text-3xl text-center md:text-2xl text-xl font-bold text-blue-700 hover:text-blue-500">Kedar! Web Belajar Online</a>
-							<button @click="open= !open" class="lg:hidden h-full text-blue-700 hover:bg-blue-100 rounded-full">
+							<button @click="open= !open" class="lg:hidden h-full text-blue-700 lg:hover:bg-blue-100 rounded-full">
 								<svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180':open, 'rotate-0':!open}" class="h-6 w-6 transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 								</svg>
@@ -483,7 +483,7 @@
 					<div x-data="{open: false}" @click.away="open= false">
 						<div class="flex justify-between items-center">
 							<p class="lg:text-3xl md:text-2xl text-xl font-bold text-blue-700 flex">Sistem Informasi Pegawai</p>
-							<button @click="open= !open" class="lg:hidden h-full text-blue-700 hover:bg-blue-100 rounded-full">
+							<button @click="open= !open" class="lg:hidden h-full text-blue-700 lg:hover:bg-blue-100 rounded-full">
 								<svg xmlns="http://www.w3.org/2000/svg" :class="{'rotate-180':open, 'rotate-0':!open}" class="h-6 w-6 transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 								</svg>
